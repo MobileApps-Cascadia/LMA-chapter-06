@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -30,7 +31,25 @@ public class ContactListActivity extends ListActivity {
 		initSettingsButton();
 		initDeleteButton();
 		initAddContactButton();
-		
+        ContactDataSource ds = new ContactDataSource(this);
+        ds.open();
+        final ArrayList<Contact> contacts = ds.getContacts();
+        ds.close();
+
+        setListAdapter(new ContactAdapter(this, contacts));
+
+        ListView listView = getListView();
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View itemClicked, int position, long id) {
+                Contact selectedContact = contacts.get(position);
+                Intent intent = new Intent(ContactListActivity.this, ContactActivity.class);
+                intent.putExtra("contactid", selectedContact.getContactID());
+
+                startActivity(intent);
+            }
+        });
+
 	}
 
 	@Override
