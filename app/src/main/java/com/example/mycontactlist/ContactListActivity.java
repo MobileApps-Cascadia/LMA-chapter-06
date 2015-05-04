@@ -25,12 +25,51 @@ public class ContactListActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_contact_list);
 		
-		initListButton();
+//		initListButton();
 		initMapButton();
 		initSettingsButton();
 		initDeleteButton();
 		initAddContactButton();
-		
+
+		// Add code from Listing 6.3 Simple List Activation Code P119
+		ContactDataSource ds = new ContactDataSource(this);
+		ds.open();
+		// Retrieve names
+		//ArrayList<String> names = ds.getContactName();
+
+		// Retrieve Contact objects - copied from onResume method below.
+		// This wasn't mentioned in the textbook...
+		String sortBy = getSharedPreferences("MyContactListPreferences", Context.MODE_PRIVATE).getString("sortfield", "contactname");
+		String sortOrder = getSharedPreferences("MyContactListPreferences", Context.MODE_PRIVATE).getString("sortorder", "ASC");
+		final ArrayList<Contact> contacts = ds.getContacts(sortBy, sortOrder);
+		ds.close();
+
+		// Added this code from Listing 6.8 - Does this work?
+		// Comment out this code from Listing 6.13 Modified onItemClick method
+		//setListAdapter(new ContactAdapter(this, contacts));
+
+		// Add two lines below instead from Listing 6.13 Modified onItemClick method
+		adapter = new ContactAdapter(this, contacts);
+		setListAdapter(adapter);
+
+		// Add code from Listing 6.4 Code to Respond to an Item Click P121
+		// Modified with code from Listing 6.8 Selected Item Click P127
+		ListView listview = getListView();
+		listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View itemClicked, int position, long id) {
+
+				Contact selectedContact = contacts.get(position);
+				if (isDeleting) {
+					adapter.showDelete(position, itemClicked, ContactListActivity.this, selectedContact);
+				}
+				else {
+					Intent intent = new Intent(ContactListActivity.this, ContactActivity.class);
+					intent.putExtra("contactid", selectedContact.getContactID());
+					startActivity(intent);
+				}
+			}
+		});
 	}
 
 	@Override
@@ -108,10 +147,10 @@ public class ContactListActivity extends ListActivity {
 	}
 
 	
-	private void initListButton() {
-        ImageButton list = (ImageButton) findViewById(R.id.imageButtonList);
-        list.setEnabled(false);
-	}
+//	private void initListButton() {
+//        ImageButton list = (ImageButton) findViewById(R.id.imageButtonList);
+//        list.setEnabled(false);
+//	}
 	
 	private void initMapButton() {
         ImageButton list = (ImageButton) findViewById(R.id.imageButtonMap);

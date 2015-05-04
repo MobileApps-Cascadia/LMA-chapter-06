@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/brianb/git/MobileApps-Cascadia/chapter-06/app/src/main/res/values-v14/styles.xml -->
+    <!-- From: file:/C:/Users/Hiromi/Documents/Spring%202015/BIT%20271/GitHub/Hiromi/chapter-06/app/src/main/res/values-v14/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- API 14 theme customizations can go here. -->
