@@ -36,7 +36,27 @@
             android:layout_alignParentRight="true" 
             android:layout_marginRight="10dp" 
             style="?android:attr/buttonStyleSmall"/>
-    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cell Phone"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textCellPhone"
+        android:layout_alignTop="@+id/textPhoneNumber"
+        android:layout_alignRight="@+id/buttonDeleteContact"
+        android:layout_alignEnd="@+id/buttonDeleteContact" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:text="Cell"
+        android:layout_alignBottom="@+id/buttonDeleteContact"
+        android:layout_toLeftOf="@+id/textCellPhone"
+        android:layout_toStartOf="@+id/textCellPhone" />
+
+</RelativeLayout>
 
 
-<!-- From: file:/Users/brianb/git/MobileApps-Cascadia/chapter-06/app/src/main/res/layout/list_item.xml -->
+<!-- From: file:/C:/Users/pknayyar/Documents/GitHub/New_All/chapter-06/app/src/main/res/layout/list_item.xml -->
