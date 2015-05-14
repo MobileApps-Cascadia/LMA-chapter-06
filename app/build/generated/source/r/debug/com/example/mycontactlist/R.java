@@ -11,11 +11,13 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int navbar_background=0x7f040000;
-        public static final int system_blue=0x7f040001;
-        public static final int system_red=0x7f040002;
-        public static final int system_white=0x7f040003;
-        public static final int toolbar_background=0x7f040004;
+        public static final int lightYellow=0x7f040000;
+        public static final int lightgreen=0x7f040001;
+        public static final int navbar_background=0x7f040002;
+        public static final int system_blue=0x7f040003;
+        public static final int system_red=0x7f040004;
+        public static final int system_white=0x7f040005;
+        public static final int toolbar_background=0x7f040006;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f050000;
@@ -29,7 +31,7 @@ public final class R {
         public static final int settingsicon=0x7f020004;
     }
     public static final class id {
-        public static final int action_settings=0x7f09002b;
+        public static final int action_settings=0x7f09002d;
         public static final int birthdayPicker=0x7f090024;
         public static final int btnBirthday=0x7f090017;
         public static final int btnCancel=0x7f090026;
@@ -46,6 +48,7 @@ public final class R {
         public static final int editHome=0x7f09000f;
         public static final int editName=0x7f090009;
         public static final int editState=0x7f09000d;
+        public static final int editText=0x7f09002c;
         public static final int editZipcode=0x7f09000e;
         public static final int imageButtonList=0x7f090001;
         public static final int imageButtonMap=0x7f090002;
@@ -64,6 +67,7 @@ public final class R {
         public static final int textBday=0x7f090015;
         public static final int textBirthday=0x7f090016;
         public static final int textCell=0x7f090012;
+        public static final int textCellPhone=0x7f09002b;
         public static final int textContact=0x7f090008;
         public static final int textContactName=0x7f090028;
         public static final int textEMail=0x7f090014;
