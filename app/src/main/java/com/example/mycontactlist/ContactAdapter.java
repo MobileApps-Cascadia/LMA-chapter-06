@@ -3,6 +3,8 @@ package com.example.mycontactlist;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,15 +18,19 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
     private ArrayList<Contact> items;
     private Context adapterContext;
 
+	// Original
     public ContactAdapter(Context context, ArrayList<Contact> items) {
             super(context, R.layout.list_item, items);
             adapterContext = context;
             this.items = items;
+
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         View v = convertView;
+
     	try {
             Contact contact = items.get(position);
             
@@ -33,12 +39,30 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
             		v = vi.inflate(R.layout.list_item, null);
             }
 
+			// Alternating row colors
+			if (position % 2 == 0){
+				v.setBackgroundResource(R.color.light_green);
+			}
+			else{
+				v.setBackgroundResource(R.color.light_pink);
+			}
+
             TextView contactName = (TextView) v.findViewById(R.id.textContactName);
+			TextView contactAddress = (TextView) v.findViewById(R.id.textAddress);
+			TextView contactCity = (TextView) v.findViewById(R.id.textCity);
+			TextView contactState = (TextView) v.findViewById(R.id.textState);
+			TextView contactZip = (TextView) v.findViewById(R.id.textZip);
             TextView contactNumber = (TextView) v.findViewById(R.id.textPhoneNumber);
+			TextView contactCell = (TextView) v.findViewById(R.id.textCell);
         	Button b = (Button) v.findViewById(R.id.buttonDeleteContact);
             	
         	contactName.setText(contact.getContactName());
+			contactAddress.setText(contact.getStreetAddress());
+			contactCity.setText(contact.getCity());
+			contactState.setText(contact.getState());
+			contactZip.setText(contact.getZipCode());
         	contactNumber.setText(contact.getPhoneNumber());
+			contactCell.setText(contact.getCellNumber());
             b.setVisibility(View.INVISIBLE);
     	}
     	catch (Exception e) {

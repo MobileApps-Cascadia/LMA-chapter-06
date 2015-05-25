@@ -5,4 +5,7 @@
     <color name="system_red">#ff0000</color>
     <color name="system_white">#ffffff</color>
     <color name="system_blue">#0000ff</color>
+    
+    <color name="light_pink">#FFCCCC</color>
+    <color name="light_green">#CCFFCC</color>
 </resources>

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <RelativeLayout android:layout_height="match_parent" 
+    <RelativeLayout
+        android:layout_height="match_parent"
         android:layout_width="match_parent" 
         xmlns:android="http://schemas.android.com/apk/res/android">
-        
-        <TextView android:layout_height="wrap_content" 
+
+    <!--Contact Name-->
+        <TextView
+            android:layout_height="wrap_content"
             android:layout_width="wrap_content" 
             android:textAppearance="?android:attr/textAppearanceLarge" 
             android:text="Contact Name" 
@@ -12,17 +15,33 @@
             android:layout_alignParentTop="true" 
             android:layout_alignParentLeft="true" 
             android:id="@+id/textContactName"/>
-        
-        <TextView android:layout_height="wrap_content" 
+
+    <!--Home Phone Number-->
+        <TextView
+            android:layout_height="wrap_content"
             android:layout_width="wrap_content" 
-            android:textAppearance="?android:attr/textAppearanceMedium" 
-            android:text="Phone Number" 
-            android:layout_marginLeft="15sp" 
-            android:layout_alignParentLeft="true" 
-            android:id="@+id/textPhoneNumber" 
-            android:layout_below="@+id/textContactName"/>
-        
-        <Button android:layout_height="wrap_content" 
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Home"
+            android:id="@+id/textPhoneNumber"
+            android:layout_alignTop="@+id/textCell"
+            android:layout_toRightOf="@id/textHome"
+            android:layout_marginRight="20dp"
+            android:layout_alignBaseline="@id/textPhoneNumber"/>
+
+    <!--Cell Phone Number-->
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Cell"
+            android:id="@+id/textCell"
+            android:layout_below="@+id/textCity"
+            android:layout_toRightOf="@+id/textCellText"
+            android:layout_alignBottom="@id/textCell"/>
+
+    <!--Delete button-->
+        <Button
+            android:layout_height="wrap_content"
             android:layout_width="wrap_content" 
             android:text="Delete" 
             android:textColor="@color/system_red" 
@@ -36,6 +55,74 @@
             android:layout_alignParentRight="true" 
             android:layout_marginRight="10dp" 
             style="?android:attr/buttonStyleSmall"/>
-    </RelativeLayout>
+
+    <!--Street Address-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Street Address"
+            android:id="@+id/textAddress"
+            android:layout_below="@+id/textContactName"
+            android:layout_alignLeft="@+id/textContactName"
+            android:layout_alignStart="@+id/textContactName" />
+
+    <!--City-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="City"
+        android:id="@+id/textCity"
+        android:layout_below="@+id/textAddress"
+        android:layout_alignLeft="@+id/textAddress"
+        android:layout_alignStart="@+id/textAddress"
+        android:layout_marginRight="20dp"/>
+
+    <!--State-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="State"
+            android:id="@+id/textState"
+            android:layout_above="@+id/textPhoneNumber"
+            android:layout_toRightOf="@+id/textCity"
+            android:layout_marginRight="20dp"/>
+
+    <!--Zip-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Zip"
+            android:id="@+id/textZip"
+            android:layout_above="@+id/textCellText"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/textState"/>
+
+    <!--Home Text-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Home:"
+        android:id="@+id/textHome"
+        android:layout_alignTop="@+id/textPhoneNumber"
+        android:layout_alignLeft="@+id/textCity"
+        android:layout_alignStart="@+id/textCity" />
+
+    <!--Cell Text-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cell:"
+        android:id="@+id/textCellText"
+        android:layout_alignTop="@+id/textCell"
+        android:layout_toRightOf="@+id/textPhoneNumber" />
+
+
+</RelativeLayout>
 
 

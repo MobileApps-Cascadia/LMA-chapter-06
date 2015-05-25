@@ -113,6 +113,7 @@ public class ContactDataSource {
 		return contactNames;
 	}
 
+	// Code from Listing 6.5 getContacts method
 	public ArrayList<Contact> getContacts(String sortField, String sortOrder) {
 		ArrayList<Contact> contacts = new ArrayList<Contact>();
 		try {
