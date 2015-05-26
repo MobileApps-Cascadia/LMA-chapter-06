@@ -35,10 +35,12 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
 
             TextView contactName = (TextView) v.findViewById(R.id.textContactName);
             TextView contactNumber = (TextView) v.findViewById(R.id.textPhoneNumber);
+            TextView contactCellNumber = (TextView) v.findViewById(R.id.textCellNumber);
         	Button b = (Button) v.findViewById(R.id.buttonDeleteContact);
             	
         	contactName.setText(contact.getContactName());
         	contactNumber.setText(contact.getPhoneNumber());
+            contactCellNumber.setText(contact.getCellNumber());
             b.setVisibility(View.INVISIBLE);
     	}
     	catch (Exception e) {

@@ -81,7 +81,7 @@
         
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
             
             
 
@@ -105,7 +105,9 @@
                 android:layout_below="@+id/textContact"
                 android:ems="14"
                 android:imeOptions="actionNext"
-                android:inputType="textCapWords" >
+                android:inputType="textCapWords"
+                android:background="@drawable/border_round_bg_grey"
+                android:padding="7dp">
 
             </EditText>
 
@@ -129,7 +131,9 @@
                 android:layout_below="@+id/textAddress"
                 android:ems="14"
                 android:imeOptions="actionNext"
-                android:inputType="textCapWords" >
+                android:inputType="textCapWords"
+               android:padding="7dp"
+               android:background="@drawable/border_round_bg_grey">
 
             </EditText>
             
@@ -143,7 +147,10 @@
                 android:ems="8"
                 android:imeOptions="actionNext"
                 android:nextFocusDown="@+id/editState"
-                android:inputType="textCapWords" >
+                android:inputType="textCapWords"
+               android:background="@drawable/border_round_bg_grey"
+               android:padding="7dp"
+               android:layout_marginTop="5dp">
 
             </EditText>
             
@@ -157,7 +164,9 @@
                 android:maxLength="2"
                 android:imeOptions="actionNext"
                 android:nextFocusDown="@+id/editZipcode"
-                android:inputType="textCapCharacters" >
+                android:inputType="textCapCharacters"
+               android:padding="7dp"
+               android:background="@drawable/border_round_bg_grey">
 
             </EditText>
             
@@ -171,7 +180,9 @@
                 android:maxLength="5"
                 android:imeOptions="actionNext"
                 android:nextFocusDown="@+id/editHome"
-                android:inputType="numberSigned" >
+                android:inputType="numberSigned"
+                android:padding="7dp"
+                android:background="@drawable/border_round_bg_grey">
 
             </EditText>
 
@@ -197,7 +208,9 @@
                 android:maxLength="14"
                 android:ems="7"
                 android:nextFocusDown="@+id/editCell"
-                android:inputType="textCapWords" >
+                android:inputType="textCapWords"
+               android:background="@drawable/border_round_bg_grey"
+               android:padding="7dp">
 
             </EditText>
             
@@ -221,7 +234,9 @@
                 android:ems="7"
                 android:imeOptions="actionNext"
                 android:nextFocusDown="@+id/editEMail"
-                android:inputType="textCapWords" >
+                android:inputType="textCapWords"
+               android:background="@drawable/border_round_bg_grey"
+               android:padding="7dp">
 
             </EditText>
             
@@ -244,7 +259,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_below="@+id/textEMail"
                 android:ems="13"
-                android:inputType="textEmailAddress" >
+                android:inputType="textEmailAddress"
+               android:padding="7dp"
+               android:background="@drawable/border_round_bg_grey">
 
             </EditText>
             
@@ -269,7 +286,10 @@
                 android:layout_marginLeft="10dp"
                 android:paddingBottom="25dp"
                 android:text="01/01/1970"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:textAppearance="?android:attr/textAppearanceSmall"
+               android:background="@drawable/border_round_bg_grey"
+               android:layout_toLeftOf="@+id/editState"
+               android:layout_toStartOf="@+id/editState" />
 
            <Button
                android:id="@+id/btnBirthday"
