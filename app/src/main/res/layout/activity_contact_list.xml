@@ -66,5 +66,13 @@
         android:layout_above="@+id/navbar" 
         android:layout_below="@+id/toolbar"> 
     </ListView>
-        
+
+    <ListView
+        android:id="@id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/navbar" />
+
 </RelativeLayout>
