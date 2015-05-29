@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -48,8 +49,9 @@ public class ContactListActivity extends ListActivity {
 
 		ContactDataSource ds = new ContactDataSource(this);
 		ds.open();
-		final ArrayList<Contact> contacts = ds.getContacts(sortBy, sortOrder);
+		ArrayList<String> names = ds.getContactName();
 		ds.close();
+        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1));
 		
 		if (contacts.size() > 0) {
 

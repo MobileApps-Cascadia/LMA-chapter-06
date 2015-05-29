@@ -1,5 +1,7 @@
 package com.example.mycontactlist;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 import android.content.ContentValues;
@@ -7,6 +9,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.text.format.Time;
 
 public class ContactDataSource {
@@ -41,6 +45,12 @@ public class ContactDataSource {
 			initialValues.put("cellnumber", c.getCellNumber());    
 			initialValues.put("email", c.getEMail());    
 			initialValues.put("birthday", String.valueOf(c.getBirthday().toMillis(false)));
+                    ByteArrayOutputStream baos  = new
+                    ByteArrayOutputStream();
+                    c.getPicture().compress(Bitmap.CompressFormat.PNG, 100, baos);
+                    byte[] photo = baos.toByteArray();
+
+                    initialValues.put("contactphoto", photo);
 
 			didSucceed = database.insert("contact", null, initialValues) > 0;
 
@@ -67,6 +77,12 @@ public class ContactDataSource {
 			updateValues.put("cellnumber", c.getCellNumber());    
 			updateValues.put("email", c.getEMail());    
 			updateValues.put("birthday", String.valueOf(c.getBirthday().toMillis(false)));
+                    ByteArrayOutputStream baos  = new
+                    ByteArrayOutputStream();
+                    c.getPicture().compress(Bitmap.CompressFormat.PNG, 100, baos);
+                    byte[] photo = baos.toByteArray();
+
+                    updateValues.put("contactphoto", photo);
 
 			didSucceed = database.update("contact", updateValues, "_id=" + rowId, null) > 0;
 		}
@@ -148,6 +164,25 @@ public class ContactDataSource {
 		return contacts;
 	}
 
+    public ArrayList<String> getContactName() {
+            ArrayList<String> contactNames = new ArrayList<String>
+                    ();
+            try {
+                String query = "Select contactName from contact";
+                Cursor cursor = database.rawQuery(query, null);
+                cursor.moveToFirst();
+                while (!cursor.isAfterLast()) {
+                    contactNames.add(cursor.getString(0));
+                    cursor.moveToNext();
+                }
+                cursor.close();
+            }
+            catch (Exception e) {
+                contactNames = new ArrayList<String>();
+            }
+        return contactNames;
+    }
+
 	public Contact getSpecificContact(int contactId) {
 		Contact contact = new Contact();
 
@@ -168,6 +203,17 @@ public class ContactDataSource {
 			t.set(Long.valueOf(cursor.getString(9)));
 			contact.setBirthday(t);
 		}
+        if(cursor.getBlob(10)!= null) {
+            byte [] photo = cursor.getBlob(10);
+            if (photo != null) {
+                ByteArrayInputStream imageStream =
+                        new ByteArrayInputStream(photo);
+                Bitmap thePicture=
+                        BitmapFactory.decodeStream(imageStream);
+                contact.setPicture(thePicture);
+            }
+        }
+
 		cursor.close();
 			
 		return contact;
