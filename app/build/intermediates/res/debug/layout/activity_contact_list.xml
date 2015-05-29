@@ -58,13 +58,23 @@
             android:layout_toRightOf="@+id/imageButtonMap"/>
     
     </RelativeLayout>
-    
-    <ListView android:layout_height="wrap_content" 
-        android:layout_width="match_parent" 
-        android:layout_alignParentLeft="true" 
-        android:id="@id/android:list" 
-        android:layout_above="@+id/navbar" 
-        android:layout_below="@+id/toolbar"> 
+
+    <ListView android:id="@id/android:list"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/navbar"
+        android:layout_alignParentBottom="true">
     </ListView>
-        
-</RelativeLayout><!-- From: file:/Users/brianb/git/MobileApps-Cascadia/chapter-06/app/src/main/res/layout/activity_contact_list.xml -->
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/navbar"
+        android:layout_alignTop="@id/android:list" />
+
+</RelativeLayout><!-- From: file:/C:/Users/DebraW/Documents/GitHub/chapter-06/app/src/main/res/layout/activity_contact_list.xml -->

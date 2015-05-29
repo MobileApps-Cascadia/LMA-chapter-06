@@ -5,6 +5,7 @@ import com.example.mycontactlist.DatePickerDialog.SaveDateListener;
 import android.os.Bundle;
 import android.content.Context;
 import android.content.Intent;
+import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.telephony.PhoneNumberFormattingTextWatcher;
@@ -133,6 +134,33 @@ public class ContactActivity extends FragmentActivity implements SaveDateListene
 			}
 		});
 	}
+    private void initImageButton() {
+        ImageButton ib = (ImageButton)
+                findViewById(R.id.imageContact);
+        ib.setOnClickListener(new
+        View.OnClickListener() {
+            public void onClick(View v) {
+                takePhoto();
+            }
+        });
+    }
+    public void takePhoto() {
+        Intent cameraIntent = new
+                Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(cameraIntent, CAMERA_REQUEST);
+    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == CAMERA_REQUEST) {
+            if (resultCode == RESULT_OK) {
+                Bitmap photo = (Bitmap)
+                        data.getExtras().get("data");
+                Bitmap scaledPhoto = Bitmap.createScaledBitmap(photo, 72, 72, true);
+                ImageButton ImageContact = (ImageButton)
+                        findViewById(R.id.imageContact);
+                imageContact.setImageBitmap(scaledPhoto);
+                currentContact.setPicture(scaledPhoto);
+            }
+        }
 
 	private void initTextChangedEvents(){
 		final EditText contactName = (EditText) findViewById(R.id.editName);
@@ -374,7 +402,14 @@ public class ContactActivity extends FragmentActivity implements SaveDateListene
 
 		birthDay.setText(DateFormat.format("MM/dd/yyyy", currentContact.getBirthday().toMillis(false)).toString());		
 	}
-
+ImageButton picture = (ImageButton)
+findViewById(R.id.imageContact);
+    if(currentContact.getPicture() != null) {
+    picture.setImageBitmap(currentContact.getPicture());
+    }
+    else {
+        picture.setImageResource(R.drawable.camera);
+    }
 
 	@Override
 	public void didFinishDatePickerDialog(Time selectedTime) {

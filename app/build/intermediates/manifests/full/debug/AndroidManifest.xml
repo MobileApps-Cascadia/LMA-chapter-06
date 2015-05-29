@@ -34,6 +34,8 @@
             android:name="com.example.mycontactlist.ContactSettingsActivity"
             android:label="@string/title_activity_contact_settings" >
         </activity>
+
+        <uses-permission android:name="android.permission.CAMERA" />
     </application>
 
 </manifest>
