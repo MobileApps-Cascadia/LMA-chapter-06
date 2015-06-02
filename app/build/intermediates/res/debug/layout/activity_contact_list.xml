@@ -64,7 +64,9 @@
         android:layout_alignParentLeft="true" 
         android:id="@id/android:list" 
         android:layout_above="@+id/navbar" 
-        android:layout_below="@+id/toolbar"> 
+        android:layout_below="@+id/toolbar"
+        android:divider="@color/system_white"
+        android:dividerHeight="2dp">
     </ListView>
         
-</RelativeLayout><!-- From: file:/Users/brianb/git/MobileApps-Cascadia/chapter-06/app/src/main/res/layout/activity_contact_list.xml -->
+</RelativeLayout><!-- From: file:/F:/Cascadia_Online_Courses/Course_BIT271/chapter-06/app/src/main/res/layout/activity_contact_list.xml -->

@@ -12,10 +12,12 @@ public final class R {
     }
     public static final class color {
         public static final int navbar_background=0x7f040000;
-        public static final int system_blue=0x7f040001;
-        public static final int system_red=0x7f040002;
-        public static final int system_white=0x7f040003;
-        public static final int toolbar_background=0x7f040004;
+        public static final int row_color_even=0x7f040001;
+        public static final int row_color_odd=0x7f040002;
+        public static final int system_blue=0x7f040003;
+        public static final int system_red=0x7f040004;
+        public static final int system_white=0x7f040005;
+        public static final int toolbar_background=0x7f040006;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f050000;
@@ -29,14 +31,14 @@ public final class R {
         public static final int settingsicon=0x7f020004;
     }
     public static final class id {
-        public static final int action_settings=0x7f09002b;
+        public static final int action_settings=0x7f090030;
         public static final int birthdayPicker=0x7f090024;
         public static final int btnBirthday=0x7f090017;
         public static final int btnCancel=0x7f090026;
         public static final int btnOk=0x7f090027;
         public static final int buttonAdd=0x7f090019;
         public static final int buttonDelete=0x7f090018;
-        public static final int buttonDeleteContact=0x7f09002a;
+        public static final int buttonDeleteContact=0x7f090029;
         public static final int buttonSave=0x7f090006;
         public static final int dateSeletLayout=0x7f090023;
         public static final int editAddress=0x7f09000b;
@@ -58,19 +60,24 @@ public final class R {
         public static final int radioGroup1=0x7f09001b;
         public static final int radioGroup2=0x7f090020;
         public static final int radioName=0x7f09001c;
+        public static final int rowTable1=0x7f09002a;
+        public static final int rowTable2=0x7f09002b;
         public static final int scrollView1=0x7f090007;
         public static final int tableRow1=0x7f090025;
         public static final int textAddress=0x7f09000a;
         public static final int textBday=0x7f090015;
         public static final int textBirthday=0x7f090016;
         public static final int textCell=0x7f090012;
+        public static final int textCellNumber=0x7f09002f;
         public static final int textContact=0x7f090008;
         public static final int textContactName=0x7f090028;
         public static final int textEMail=0x7f090014;
         public static final int textHome=0x7f090010;
-        public static final int textPhoneNumber=0x7f090029;
+        public static final int textHomeNumber=0x7f09002d;
+        public static final int textView=0x7f09002c;
         public static final int textView1=0x7f09001a;
         public static final int textView2=0x7f09001f;
+        public static final int textView3=0x7f09002e;
         public static final int toggleButtonEdit=0x7f090005;
         public static final int toolbar=0x7f090004;
     }
