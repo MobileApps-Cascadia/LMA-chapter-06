@@ -64,7 +64,9 @@
         android:layout_alignParentLeft="true" 
         android:id="@id/android:list" 
         android:layout_above="@+id/navbar" 
-        android:layout_below="@+id/toolbar"> 
+        android:layout_below="@+id/toolbar"
+        android:divider="@color/system_white"
+        android:dividerHeight="2dp">
     </ListView>
         
 </RelativeLayout>

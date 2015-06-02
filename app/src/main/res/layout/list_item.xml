@@ -8,34 +8,87 @@
             android:textAppearance="?android:attr/textAppearanceLarge" 
             android:text="Contact Name" 
             android:textColor="@color/system_blue" 
-            android:layout_marginLeft="15sp" 
+            android:layout_marginLeft="10dp"
             android:layout_alignParentTop="true" 
             android:layout_alignParentLeft="true" 
             android:id="@+id/textContactName"/>
-        
-        <TextView android:layout_height="wrap_content" 
-            android:layout_width="wrap_content" 
-            android:textAppearance="?android:attr/textAppearanceMedium" 
-            android:text="Phone Number" 
-            android:layout_marginLeft="15sp" 
-            android:layout_alignParentLeft="true" 
-            android:id="@+id/textPhoneNumber" 
-            android:layout_below="@+id/textContactName"/>
-        
-        <Button android:layout_height="wrap_content" 
-            android:layout_width="wrap_content" 
-            android:text="Delete" 
-            android:textColor="@color/system_red" 
-            android:id="@+id/buttonDeleteContact" 
-            android:focusableInTouchMode="false" 
-            android:focusable="false" 
-            android:visibility="visible" 
-            android:background="@color/system_white" 
-            android:layout_alignParentTop="true" 
+
+    <Button android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Delete"
+            android:textColor="@color/system_red"
+            android:id="@+id/buttonDeleteContact"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:visibility="visible"
+            android:background="@color/system_white"
+            android:layout_alignParentTop="true"
             android:layout_marginTop="10dp"
-            android:layout_alignParentRight="true" 
-            android:layout_marginRight="10dp" 
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
             style="?android:attr/buttonStyleSmall"/>
-    </RelativeLayout>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textContactName"
+        android:id="@+id/rowTable1"
+        android:layout_alignLeft="@+id/textContactName">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Street Address, City, State, ZipCode"
+            android:id="@+id/textAddress"
+            android:textSize="16sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rowTable2"
+        android:layout_below="@+id/rowTable1"
+        android:layout_alignLeft="@+id/rowTable1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Home:"
+            android:id="@+id/textView"
+            android:textSize="15sp" />
+
+        <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="123-456-7890"
+            android:layout_alignParentLeft="true"
+                android:id="@+id/textHomeNumber"
+                android:layout_below="@+id/textContactName"
+            android:textSize="15sp"
+            android:layout_marginLeft="3dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Cell:"
+            android:id="@+id/textView3"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="3dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="123-456-7890"
+            android:id="@+id/textCellNumber"
+            android:textSize="15sp" />
+
+    </TableRow>
+
+</RelativeLayout>
 
 
