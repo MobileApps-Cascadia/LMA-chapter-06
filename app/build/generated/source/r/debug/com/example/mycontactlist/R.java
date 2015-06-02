@@ -12,10 +12,12 @@ public final class R {
     }
     public static final class color {
         public static final int navbar_background=0x7f040000;
-        public static final int system_blue=0x7f040001;
-        public static final int system_red=0x7f040002;
-        public static final int system_white=0x7f040003;
-        public static final int toolbar_background=0x7f040004;
+        public static final int row_color_even=0x7f040001;
+        public static final int row_color_odd=0x7f040002;
+        public static final int system_blue=0x7f040003;
+        public static final int system_red=0x7f040004;
+        public static final int system_white=0x7f040005;
+        public static final int toolbar_background=0x7f040006;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f050000;

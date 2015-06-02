@@ -46,10 +46,13 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
 			contactAddress.setText(contact.getStreetAddress() + ", " + contact.getCity() + ", " + contact.getState() + ", " + contact.getZipCode());
             b.setVisibility(View.INVISIBLE);
 
-			if(position % 2 == 0)
+			if(position % 2 == 0) {
 				contactName.setTextColor(Color.RED);
-			else
+				v.setBackgroundResource(R.color.row_color_even);
+			}else {
 				contactName.setTextColor(Color.BLUE);
+				v.setBackgroundResource(R.color.row_color_odd);
+			}
     	}
     	catch (Exception e) {
     		e.printStackTrace();

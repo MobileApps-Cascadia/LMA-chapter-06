@@ -3,6 +3,8 @@
     <!-- From: file:/F:/Cascadia_Online_Courses/Course_BIT271/chapter-06/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="navbar_background">#1a1a48</color>
+    <color name="row_color_even">#ffe5ffd4</color>
+    <color name="row_color_odd">#ffffdbd2</color>
     <color name="system_blue">#0000ff</color>
     <color name="system_red">#ff0000</color>
     <color name="system_white">#ffffff</color>
