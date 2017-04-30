@@ -1,41 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <RelativeLayout android:layout_height="match_parent" 
-        android:layout_width="match_parent" 
-        xmlns:android="http://schemas.android.com/apk/res/android">
-        
-        <TextView android:layout_height="wrap_content" 
-            android:layout_width="wrap_content" 
-            android:textAppearance="?android:attr/textAppearanceLarge" 
-            android:text="Contact Name" 
-            android:textColor="@color/system_blue" 
-            android:layout_marginLeft="15sp" 
-            android:layout_alignParentTop="true" 
-            android:layout_alignParentLeft="true" 
-            android:id="@+id/textContactName"/>
-        
-        <TextView android:layout_height="wrap_content" 
-            android:layout_width="wrap_content" 
-            android:textAppearance="?android:attr/textAppearanceMedium" 
-            android:text="Phone Number" 
-            android:layout_marginLeft="15sp" 
-            android:layout_alignParentLeft="true" 
-            android:id="@+id/textPhoneNumber" 
-            android:layout_below="@+id/textContactName"/>
-        
-        <Button android:layout_height="wrap_content" 
-            android:layout_width="wrap_content" 
-            android:text="Delete" 
-            android:textColor="@color/system_red" 
-            android:id="@+id/buttonDeleteContact" 
-            android:focusableInTouchMode="false" 
-            android:focusable="false" 
-            android:visibility="visible" 
-            android:background="@color/system_white" 
-            android:layout_alignParentTop="true" 
-            android:layout_marginTop="10dp"
-            android:layout_alignParentRight="true" 
-            android:layout_marginRight="10dp" 
-            style="?android:attr/buttonStyleSmall"/>
-    </RelativeLayout>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/textCellNumber" />
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Contact Name"
+        android:textColor="@color/system_blue"
+        android:layout_marginLeft="15sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/textContactName"/>
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Phone Number"
+        android:layout_marginLeft="15sp"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/textPhoneNumber"
+        android:layout_below="@+id/textContactName"/>
+
+    <TextView
+        android:id="@+id/textCellNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Cell Number"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="14sp"
+        android:layout_below="@+id/textPhoneNumber"
+        android:layout_alignLeft="@+id/textPhoneNumber"
+        android:layout_alignStart="@+id/textPhoneNumber"
+        android:layout_alignRight="@+id/textPhoneNumber"
+        android:layout_alignEnd="@+id/textPhoneNumber" />
+
+
+    <Button android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Delete"
+        android:textColor="@color/system_red"
+        android:id="@+id/buttonDeleteContact"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:visibility="visible"
+        android:background="@color/system_white"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        style="?android:attr/buttonStyleSmall"/>
+
+</RelativeLayout>
 
 

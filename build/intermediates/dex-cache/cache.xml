@@ -2,11 +2,22 @@
 <items version="2" >
 
     <item
-        jar="/Users/brianb/Code/Android/android-sdk-macosx/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="/Users/brianb/git/MobileApps-Cascadia/chapter-06/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-a1fd139f821f434b0a5003b5633da14467617fb1.jar" />
+        is-multidex="true"
+        jar="/Users/Z-man/Documents/SCHOOL/BIT 271/LMA-chapter-06/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5497a44b7bf68e140cb0cc77b5cf897815c3578c">
+        <dex dex="/Users/Z-man/Documents/SCHOOL/BIT 271/LMA-chapter-06/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6bf37fb4040c2be48f8866c15846464dd8001b66/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Z-man/Documents/SCHOOL/BIT 271/LMA-chapter-06/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/Z-man/Documents/SCHOOL/BIT 271/LMA-chapter-06/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_81d9cb217303ebb504b049d09f5c472d706d9130/classes.dex" />
     </item>
 
 </items>
