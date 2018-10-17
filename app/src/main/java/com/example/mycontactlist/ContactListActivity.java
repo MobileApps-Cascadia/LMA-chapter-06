@@ -56,6 +56,16 @@ public class ContactListActivity extends ListActivity {
 			adapter = new ContactAdapter(this, contacts);
 			setListAdapter(adapter);
 			ListView listView = getListView();
+
+
+
+
+
+
+
+
+
+
 			listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
 				@Override
