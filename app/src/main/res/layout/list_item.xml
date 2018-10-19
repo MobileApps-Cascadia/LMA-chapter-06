@@ -17,11 +17,90 @@
             android:layout_width="wrap_content" 
             android:textAppearance="?android:attr/textAppearanceMedium" 
             android:text="Phone Number" 
-            android:layout_marginLeft="15sp" 
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
             android:layout_alignParentLeft="true" 
             android:id="@+id/textPhoneNumber" 
             android:layout_below="@+id/textContactName"/>
-        
+    <!--list should display the contact name on first line then Home:the number Cell: the number on
+    the second line-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cell:"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_below="@+id/textContactName"
+        android:layout_alignLeft="@+id/textPhoneNumber"
+        android:id="@+id/textCellNumber"
+
+        />
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Contact Name"
+        android:layout_marginLeft="15sp"
+        android:layout_below="@+id/textCellNumber"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/textContactName2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Street address"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/textContactName2"
+        android:id="@+id/textStreetAddress"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="City"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_alignRight="@id/textStreetAddress"
+        android:id="@+id/textCity"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="State"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_alignRight="@id/textCity"
+        android:id="@+id/textState"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Zip"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_alignRight="@id/textState"
+        android:id="@+id/textZip"
+
+        />
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Phone Number"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/textPhoneNumber2"
+        android:layout_below="@+id/textState"/>
+
         <Button android:layout_height="wrap_content" 
             android:layout_width="wrap_content" 
             android:text="Delete" 
@@ -36,6 +115,8 @@
             android:layout_alignParentRight="true" 
             android:layout_marginRight="10dp" 
             style="?android:attr/buttonStyleSmall"/>
+
+
     </RelativeLayout>
 
 
