@@ -3,6 +3,7 @@ package com.example.mycontactlist;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -33,12 +34,19 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
             		v = vi.inflate(R.layout.list_item, null);
             }
 
-            TextView contactName = (TextView) v.findViewById(R.id.textContactName);
-            TextView contactNumber = (TextView) v.findViewById(R.id.textPhoneNumber);
-        	Button b = (Button) v.findViewById(R.id.buttonDeleteContact);
-            	
-        	contactName.setText(contact.getContactName());
-        	contactNumber.setText(contact.getPhoneNumber());
+			TextView contactName = (TextView) v.findViewById(R.id.textContactName);
+			TextView contactNumber = (TextView) v.findViewById(R.id.textPhoneNumber);
+			TextView contactCell = (TextView) v.findViewById(R.id.textCell);
+			TextView contactAddress = (TextView) v.findViewById(R.id.textAddress);
+			Button b = (Button) v.findViewById(R.id.buttonDeleteContact);
+
+			contactName.setText(contact.getContactName());
+			contactNumber.setText("Home: " + contact.getPhoneNumber());
+			contactCell.setText("Cell: " + contact.getCellNumber());
+			contactAddress.setText(contact.getStreetAddress());
+			if(position % 2 == 0){
+				contactName.setTextColor(Color.BLUE);
+			}
             b.setVisibility(View.INVISIBLE);
     	}
     	catch (Exception e) {
