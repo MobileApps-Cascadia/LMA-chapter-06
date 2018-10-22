@@ -12,6 +12,18 @@
             android:layout_alignParentTop="true" 
             android:layout_alignParentLeft="true" 
             android:id="@+id/textContactName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/address"
+            android:textColor="@color/system_red"
+            android:layout_marginLeft="15sp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/textAddress"
+            android:layout_below="@+id/textContactName"
+            />
         
         <TextView android:layout_height="wrap_content" 
             android:layout_width="wrap_content" 
@@ -19,8 +31,9 @@
             android:text="Phone Number" 
             android:layout_marginLeft="15sp" 
             android:layout_alignParentLeft="true" 
-            android:id="@+id/textPhoneNumber" 
-            android:layout_below="@+id/textContactName"/>
+            android:id="@+id/textPhoneNumber"
+            android:layout_below="@id/textAddress"
+            />
         
         <Button android:layout_height="wrap_content" 
             android:layout_width="wrap_content" 

@@ -7,5 +7,6 @@
     <string name="title_activity_contact_list">Contact List</string>
     <string name="title_activity_contact_map">Contacts Map</string>
     <string name="title_activity_contact_settings">Settings</string>
+    <string name="address">%1$s,%2$s,%3$s,%4$s</string>
 
 </resources>
