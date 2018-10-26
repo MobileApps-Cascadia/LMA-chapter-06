@@ -11,10 +11,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class ContactAdapter extends ArrayAdapter<Contact> {
 
     private ArrayList<Contact> items;
     private Context adapterContext;
+    public int colorCounter = 0;
 
     public ContactAdapter(Context context, ArrayList<Contact> items) {
             super(context, R.layout.list_item, items);
@@ -35,10 +38,20 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
 
             TextView contactName = (TextView) v.findViewById(R.id.textContactName);
             TextView contactNumber = (TextView) v.findViewById(R.id.textPhoneNumber);
+            TextView contactCellNumber = (TextView) v.findViewById(R.id.textCellNumber);
+            TextView contactStreetAddress = (TextView) v.findViewById(R.id.textStreetAddress);
+            TextView contactCity = (TextView) v.findViewById(R.id.textCity);
+            TextView contactState = (TextView) v.findViewById(R.id.textState);
+            TextView contactZipCode = (TextView) v.findViewById(R.id.textZipCode);
         	Button b = (Button) v.findViewById(R.id.buttonDeleteContact);
             	
         	contactName.setText(contact.getContactName());
-        	contactNumber.setText(contact.getPhoneNumber());
+        	contactStreetAddress.setText(contact.getStreetAddress() +", ");
+        	contactCity.setText(contact.getCity() + ", ");
+        	contactState.setText(contact.getState() + ". ");
+        	contactZipCode.setText(contact.getZipCode());
+        	contactNumber.setText("Home: " + contact.getPhoneNumber());
+        	contactCellNumber.setText("Cell: " + contact.getCellNumber());
             b.setVisibility(View.INVISIBLE);
     	}
     	catch (Exception e) {

@@ -30,6 +30,11 @@ public class ContactListActivity extends ListActivity {
 		initSettingsButton();
 		initDeleteButton();
 		initAddContactButton();
+
+		ContactDataSource ds = new ContactDataSource(this);
+		ds.open();
+		ArrayList<String> names = ds.getContactName();
+		ds.close();
 		
 	}
 

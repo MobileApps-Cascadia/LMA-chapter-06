@@ -12,17 +12,71 @@
             android:layout_alignParentTop="true" 
             android:layout_alignParentLeft="true" 
             android:id="@+id/textContactName"/>
-        
-        <TextView android:layout_height="wrap_content" 
-            android:layout_width="wrap_content" 
-            android:textAppearance="?android:attr/textAppearanceMedium" 
-            android:text="Phone Number" 
-            android:layout_marginLeft="15sp" 
-            android:layout_alignParentLeft="true" 
-            android:id="@+id/textPhoneNumber" 
-            android:layout_below="@+id/textContactName"/>
-        
-        <Button android:layout_height="wrap_content" 
+
+    <TextView
+        android:id="@+id/textStreetAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textContactName"
+        android:layout_alignStart="@+id/textPhoneNumber"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="14dp"
+        android:text="Street Address" />
+
+    <TextView
+        android:id="@+id/textCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textStreetAddress"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/textStreetAddress"
+        android:text="City" />
+
+    <TextView
+        android:id="@+id/textState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textStreetAddress"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/textCity"
+        android:text="State" />
+
+    <TextView
+        android:id="@+id/textZipCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textStreetAddress"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/textState"
+        android:text="Zip Code" />
+
+    <TextView
+        android:id="@+id/textPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textCity"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="11dp"
+        android:text="Phone Number"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textCellNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textZipCode"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_toEndOf="@+id/textPhoneNumber"
+        android:text="Cell Number"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+    <Button android:layout_height="wrap_content"
             android:layout_width="wrap_content" 
             android:text="Delete" 
             android:textColor="@color/system_red" 
