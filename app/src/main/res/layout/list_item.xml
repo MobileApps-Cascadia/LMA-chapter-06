@@ -7,33 +7,71 @@
             android:layout_width="wrap_content" 
             android:textAppearance="?android:attr/textAppearanceLarge" 
             android:text="Contact Name" 
-            android:textColor="@color/system_blue" 
+            android:textColor="color"
             android:layout_marginLeft="15sp" 
             android:layout_alignParentTop="true" 
             android:layout_alignParentLeft="true" 
             android:id="@+id/textContactName"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/address"
-            android:textColor="@color/system_red"
-            android:layout_marginLeft="15sp"
-            android:layout_alignParentTop="true"
-            android:id="@+id/textAddress"
-            android:layout_below="@+id/textContactName"
-            />
-        
-        <TextView android:layout_height="wrap_content" 
-            android:layout_width="wrap_content" 
-            android:textAppearance="?android:attr/textAppearanceMedium" 
-            android:text="Phone Number" 
-            android:layout_marginLeft="15sp" 
-            android:layout_alignParentLeft="true" 
-            android:id="@+id/textPhoneNumber"
-            android:layout_below="@id/textAddress"
-            />
+    <TextView
+        android:id="@+id/textAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textContactName"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="15dp"
+        android:text="Address"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/system_red" />
+
+    <TextView
+        android:id="@+id/textCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textContactName"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/textAddress"
+        android:text="City"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/system_red" />
+
+    <TextView
+        android:id="@+id/textState"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_below="@+id/textContactName"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/textCity"
+        android:text="State"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/system_red" />
+
+    <TextView
+        android:id="@+id/textZip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textContactName"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/textState"
+        android:text="Zip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/system_red" />
+
+    <TextView
+        android:id="@+id/textPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textAddress"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="15dp"
+        android:text="Phone Number"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <Button android:layout_height="wrap_content" 
             android:layout_width="wrap_content" 

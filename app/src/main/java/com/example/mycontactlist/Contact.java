@@ -1,5 +1,6 @@
 package com.example.mycontactlist;
 
+import android.graphics.Color;
 import android.text.format.Time;
 
 public class Contact {
@@ -13,6 +14,7 @@ public class Contact {
 	private String cellNumber;
 	private String eMail;
 	private Time birthday;
+	private Color contactTextColor;
 	
 	public Contact() {
 		contactID = -1;
@@ -20,6 +22,8 @@ public class Contact {
 		t.setToNow();
 		birthday = t;
 	}
+
+
 
 	public int getContactID() {
 		return contactID;

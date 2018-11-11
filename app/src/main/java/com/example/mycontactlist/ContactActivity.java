@@ -1,10 +1,8 @@
 package com.example.mycontactlist;
 
-import com.example.mycontactlist.DatePickerDialog.SaveDateListener;
-
-import android.os.Bundle;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.telephony.PhoneNumberFormattingTextWatcher;
@@ -22,6 +20,8 @@ import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
+
+import com.example.mycontactlist.DatePickerDialog.SaveDateListener;
 
 public class ContactActivity extends FragmentActivity implements SaveDateListener {
 	
